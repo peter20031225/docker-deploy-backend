@@ -33,8 +33,8 @@ jobs:
        name: Login to DockerHub
        uses: docker/login-action@v2
        with:
-          username: ${{ secrest.DOCKER_HUB_USERNAME}}
-          password: ${{ secrest.DOCKER_HUB_TOKEN}}
+          username: ${{ secrest.DOCKER_HUB_USERNAME }}
+          password: ${{ secrest.DOCKER_HUB_TOKEN }}
       -
        name: prepare the docker-compose run
        run: |
@@ -45,7 +45,7 @@ jobs:
        with:
           context: .
           push: true
-          tags: peterjie/234-deploylab-fronted:latest
+          tags: peterjie/234-deploylab-backend:latest
       -
        name: copy file via ssh password
        uses: appleboy/scp-action@v0.1.4 
